@@ -17,8 +17,7 @@
 # limitations under the License.
 #
 
-#node.override['haproxy']['admin']['address_bind'] = node['cloud']['public_ipv4']
-#node.override['haproxy']['admin']['address_bind'] = node['network']['interfaces']['eth1']['addresses'].keys.find { |e| /\./ =~ e }
+node.override['haproxy']['admin']['address_bind'] = node['ipaddress']
 
 package "haproxy"
 
