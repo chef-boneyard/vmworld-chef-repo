@@ -1,10 +1,12 @@
 name 'demolb'
 description 'HAProxy role.'
-# run_list(
-#   'recipe[sql-server::server]',
-#   'recipe[demo-app::schema]'
-#   )
+run_list(
+  'recipe[demo::haproxy]'
+  )
 
 default_attributes(
-  'vmworld' => 'haproxy'
+  'vmworld' => 'haproxy',
+  'haproxy' => {
+    'app_server_role' => 'demoapp'
+  }
   )
