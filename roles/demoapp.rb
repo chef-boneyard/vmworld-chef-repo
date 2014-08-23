@@ -1,7 +1,7 @@
 name "demoapp"
 description "Web app role."
 run_list(
-  # "recipe[demo-app::django]"
+  "recipe[demo::umbraco]"
   )
 
 default_attributes(
