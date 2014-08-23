@@ -17,6 +17,10 @@
 # limitations under the License.
 #
 
+service "iptables" do
+  action [:disable, :stop]
+end
+
 node.override['haproxy']['admin']['address_bind'] = node['ipaddress']
 
 package "haproxy"
