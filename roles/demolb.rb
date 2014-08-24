@@ -7,6 +7,7 @@ run_list(
 default_attributes(
   'vmworld' => 'haproxy',
   'haproxy' => {
-    'app_server_role' => 'demoapp'
+    'app_server_role' => 'demoapp',
+    'member_port' => 12345
   }
   )
