@@ -5,5 +5,8 @@ run_list(
   )
 
 default_attributes(
-  'vmworld' => 'umbraco'
+  'vmworld' => 'umbraco',
+  'umbraco' => {
+    'port' => 80
+  }
   )
