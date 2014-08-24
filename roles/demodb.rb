@@ -8,7 +8,6 @@ description 'SQL Server role.'
 default_attributes(
   'vmworld' => 'databass',
    'sql_server' => {
-	"accept_eula": true,
-      "version": "2012"
+	"accept_eula" => true
 	}
   )
