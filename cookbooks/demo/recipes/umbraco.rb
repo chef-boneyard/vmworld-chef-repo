@@ -25,7 +25,7 @@ directory win_friendly_path(node['umbraco']['app_root']) do
   rights [:read,:modify], 'IIS_IUSRS', :applies_to_children => true
 end
 
-firewall_rule_name = "Umbraco #{node['umraco']['port']}"
+firewall_rule_name = "Umbraco #{node['umbraco']['port']}"
 
 execute "open-static-port" do
   command "netsh advfirewall firewall add rule name=\"#{firewall_rule_name}\" dir=in action=allow protocol=TCP localport=#{node['umraco']['port']}"
